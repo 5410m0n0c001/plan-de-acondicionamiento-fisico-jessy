@@ -1,3 +1,4 @@
+console.log("🚀 Plan de Jessy Cargado Correctamente - v2.1");
 const palette = {
   bg: "#0f0e17",
   card: "#1a1828",
@@ -103,69 +104,302 @@ const routines = {
 const mealPlan = [
   {
     meal: "🌅 Desayuno 7–8 am",
-    kcal: "~450 kcal",
-    protein: "25g",
-    iron: "⬆️ Alto",
+    kcal: "420–480",
+    protein: "22–28g",
+    iron: "🩸 Alto hierro",
+    appetiteNote: "Despertá el metabolismo: toma un vaso de agua tibia con limón 15 min antes.",
+    color: palette.gold,
     options: [
       {
-        name: "Huevos a la mexicana con frijoles",
-        ingredients: ["3 huevos revueltos con jitomate, cebolla, chile serrano","½ taza de frijoles negros de olla","2 tortillas de maíz calientes","1 naranja en gajos (vitamina C → absorción de hierro)"],
-        tip: "Caldo de frijol aparte si quiere comer más",
-        local: "Frijoles negros de Morelos, chiles del mercado Adolfo López Mateos"
+        name: "Huevos a la mexicana con frijoles negros",
+        emoji: "🍳",
+        desc: "Huevos revueltos con jitomate, cebolla, chile serrano y epazote. Frijoles negros de olla con caldito.",
+        ingredients: ["3 huevos", "Jitomate, cebolla, chile serrano", "Epazote fresco", "½ taza frijoles negros de olla", "2 tortillas de maíz calientes", "1 naranja en gajos (vitamina C)"],
+        tip: "El caldito de frijol aparte estimula el apetito y facilita la digestión.",
+        macros: { kcal: 450, p: "26g", c: "38g", g: "14g" },
+        iron: "⬆️ Doble fuente: huevo + frijol",
+        stimulate: "🌶️ El chile serrano activa la digestión y estimula el hambre"
       },
       {
-        name: "Enfrijoladas con huevo",
-        ingredients: ["2 tortillas bañadas en salsa de frijol negro","2 huevos estrellados encima","Queso fresco rallado","Rodajas de jitomate","1 vaso de agua de jamaica sin azúcar + limón"],
-        tip: "La jamaica es fuente de vitamina C",
-        local: "Tortillas de La Palomita (tortillería de Cuernavaca)"
+        name: "Enfrijoladas de queso con crema",
+        emoji: "🫔",
+        desc: "Tortillas sumergidas en salsa de frijol negro con chile pasilla, bañadas en crema ácida y queso fresco. Servidas con huevo estrellado.",
+        ingredients: ["3 tortillas de maíz", "1 taza frijoles licuados con chile pasilla", "2 huevos estrellados", "Queso fresco al gusto", "Crema ácida (1 cda)", "Jugo de naranja fresco"],
+        tip: "La crema y el queso aportan calorías densas para aumentar el apetito progresivamente.",
+        macros: { kcal: 480, p: "24g", c: "42g", g: "18g" },
+        iron: "⬆️ Frijol negro + huevo",
+        stimulate: "🧀 Las grasas del queso y crema estimulan las hormonas del hambre"
+      },
+      {
+        name: "Molletes con frijoles, aguacate y pico de gallo",
+        emoji: "🥖",
+        desc: "Pan bolillo abierto, untado con frijoles negros refritos, queso tipo Oaxaca gratinado, aguacate en rebanadas y pico de gallo fresco.",
+        ingredients: ["1 bolillo o telera", "Frijoles negros refritos", "Queso Oaxaca rallado, gratinado", "½ aguacate en rebanadas", "Pico de gallo fresco", "Limón y chile piquín"],
+        tip: "El aguacate añade grasas monoinsaturadas que mejoran el HDL y sacian de forma saludable.",
+        macros: { kcal: 460, p: "22g", c: "48g", g: "20g" },
+        iron: "⬆️ Frijoles + queso (calcio separado del hierro)",
+        stimulate: "🥑 El aguacate potencia la absorción de nutrientes liposolubles"
+      },
+      {
+        name: "Chilaquiles verdes con pollo deshebrado",
+        emoji: "🫓",
+        desc: "Totopos de maíz bañados en salsa verde de tomatillo y chile serrano, con pollo deshebrado, crema, queso fresco y cebolla morada.",
+        ingredients: ["1 taza totopos horneados", "Salsa verde: tomatillo, serrano, ajo, cilantro", "80g pollo deshebrado", "Cebolla morada en rodajas", "Queso fresco y crema"],
+        tip: "Los chilaquiles son uno de los platillos con mayor densidad calórica y proteína por porción.",
+        macros: { kcal: 470, p: "28g", c: "44g", g: "16g" },
+        iron: "⬆️ Pollo + tomatillo (vitamina C)",
+        stimulate: "🌿 El tomatillo y cilantro activan las papilas gustativas"
+      },
+      {
+        name: "Tlayuda de frijoles con tasajo y verduras",
+        emoji: "🫓",
+        desc: "Tortilla grande tostada con frijoles negros, tiras de tasajo (carne magra), quesillo, hoja de aguacate.",
+        ingredients: ["1 tortilla grande tostada", "Frijoles negros untados", "80g tasajo o carne magra", "Quesillo en tiras", "Lechuga, rábano, jitomate", "Limón y salsa verde"],
+        tip: "El tasajo y la carne magra son excelentes fuentes de hierro hemo.",
+        macros: { kcal: 430, p: "30g", c: "36g", g: "15g" },
+        iron: "⭐ Hierro hemo premium",
+        stimulate: "🌶️ La salsa verde y el limón despiertan las glándulas salivales"
       }
     ]
   },
   {
     meal: "🍎 Snack Mañana 10–11 am",
-    kcal: "~180 kcal",
-    protein: "8g",
-    iron: "Normal",
+    kcal: "160–200",
+    protein: "7–12g",
+    iron: "🌿 Vitamina C",
+    appetiteNote: "Este snack evita que llegues con hambre feroz a la comida. Come aunque no sientas mucho hambre.",
+    color: palette.green,
     options: [
-      { name: "Fruta + yogur", ingredients: ["1 yogur natural sin azúcar","½ plátano tabasco","Granola casera ligera (1 cda)"], tip: "Plátano = potasio + energía pre-ejercicio", local: "Plátanos de Morelos" },
-      { name: "Nueces + fruta", ingredients: ["20g nueces o almendras","1 guayaba o tejocote (vitamina C)","Agua natural"], tip: "Guayaba tiene más vitamina C que la naranja", local: "Guayabas de la región" },
+      {
+        name: "Yogur natural con guayaba y nueces",
+        emoji: "🥛",
+        desc: "Yogur griego natural sin azúcar con guayabas picadas, nueces troceadas y una pizca de canela.",
+        ingredients: ["1 yogur griego natural (150g)", "2 guayabas frescas picadas", "15g nueces troceadas", "Pizca de canela"],
+        tip: "La guayaba tiene más vitamina C que la naranja — potencia el hierro de toda la mañana.",
+        macros: { kcal: 180, p: "12g", c: "16g", g: "8g" },
+        iron: "⬆️ Vitamina C alta (guayaba)",
+        stimulate: "🍈 La guayaba dulce estimula el apetito naturalmente"
+      },
+      {
+        name: "Plátano con mantequilla de cacahuate",
+        emoji: "🍌",
+        desc: "Plátano maduro con una cucharada de mantequilla de cacahuate natural.",
+        ingredients: ["1 plátano maduro", "1 cda mantequilla de cacahuate natural", "Agua natural 250ml"],
+        tip: "Ideal 30 min antes del ejercicio: glucosa rápida + proteína para el músculo.",
+        macros: { kcal: 200, p: "7g", c: "30g", g: "7g" },
+        iron: "Normal",
+        stimulate: "🍌 El plátano maduro es uno de los alimentos más amigables con el apetito"
+      },
+      {
+        name: "Agua de Jamaica con chía y limón",
+        emoji: "🌺",
+        desc: "Jamaica sin azúcar, semillas de chía hidratadas y mucho limón. Refrescante y lleno de vitamina C.",
+        ingredients: ["1 vaso agua de jamaica", "1 cda semillas de chía", "Jugo de 1 limón"],
+        tip: "La jamaica es fuente de vitamina C y antioxidantes.",
+        macros: { kcal: 80, p: "3g", c: "12g", g: "2g" },
+        iron: "⬆️ Vitamina C alta",
+        stimulate: "🌺 El sabor ácido de la jamaica activa la digestión"
+      },
+      {
+        name: "Tejocotes con chile piquín y limón",
+        emoji: "🍊",
+        desc: "Tejocotes frescos con chile piquín en polvo y limón al gusto.",
+        ingredients: ["6–8 tejocotes frescos", "Chile piquín en polvo", "Jugo de limón"],
+        tip: "Los tejocotes tienen vitamina C natural.",
+        macros: { kcal: 90, p: "1g", c: "22g", g: "0g" },
+        iron: "⬆️ Vitamina C natural",
+        stimulate: "🌶️ El picante aumenta la secreción gástrica"
+      },
+      {
+        name: "Tostada de frijoles con aguacate",
+        emoji: "🥑",
+        desc: "1 tostada horneada con frijoles negros untados, aguacate machacado, sal de mar y limón.",
+        ingredients: ["1 tostada horneada de maíz", "3 cdas frijoles negros", "¼ aguacate machacado", "Limón + sal de grano"],
+        tip: "Las grasas del aguacate aumentan la absorción de nutrientes.",
+        macros: { kcal: 185, p: "6g", c: "24g", g: "8g" },
+        iron: "⬆️ Frijoles negros",
+        stimulate: "🥑 El aguacate estimula la producción de enzimas digestivas"
+      }
     ]
   },
   {
     meal: "☀️ Comida 2–3 pm",
-    kcal: "~550 kcal",
-    protein: "35g",
-    iron: "⬆️ Muy alto",
+    kcal: "520–600",
+    protein: "35–42g",
+    iron: "⭐ Hierro hemo premium",
+    appetiteNote: "La comida principal. El aroma y presentación del platillo activan el apetito antes del primer bocado.",
+    color: palette.accent,
     options: [
       {
-        name: "Cecina de Yecapixtla con nopales",
-        ingredients: ["150g cecina de res (hierro hemo excelente)","Nopales a la mexicana (cebolla, jitomate, cilantro)","½ taza arroz rojo","2 tortillas","Agua de limón o tamarindo natural"],
-        tip: "La cecina de Yecapixtla es uno los mejores hierro hemo de la región",
-        local: "Cecina de Yecapixtla, Morelos — ícono regional"
+        name: "Cecina de res con nopales a la mexicana",
+        emoji: "🥩",
+        desc: "Cecina de res asada en comal, con nopales a la mexicana, arroz rojo y tortillas de maíz.",
+        ingredients: ["150g cecina de res", "1 taza nopales tiernos", "½ taza arroz rojo", "3 tortillas de maíz", "Salsa roja de molcajete", "Limón generoso"],
+        tip: "La cecina de res es una de las mejores fuentes de hierro hemo.",
+        macros: { kcal: 560, p: "42g", c: "48g", g: "14g" },
+        iron: "⭐ Hierro hemo muy alto",
+        stimulate: "🔥 El aroma de la carne asada activa el apetito inmediatamente"
+      },
+      {
+        name: "Caldo de pollo con verduras de temporada",
+        emoji: "🍲",
+        desc: "Caldo reconfortante de pollo con muslo y pierna, chayote, ejotes, calabaza, zanahoria y epazote.",
+        ingredients: ["1 pieza muslo/pierna de pollo (200g)", "Chayote, ejotes, calabaza, zanahoria", "Epazote, ajo, cebolla", "½ taza arroz blanco", "3 tortillas de maíz", "Limón y chile de árbol"],
+        tip: "El colágeno del hueso de pollo fortalece articulaciones y tendones.",
+        macros: { kcal: 520, p: "38g", c: "42g", g: "12g" },
+        iron: "⬆️ Pollo + verduras verdes",
+        stimulate: "♨️ El vapor y aroma del caldo caliente activan el apetito"
+      },
+      {
+        name: "Pipián verde con pollo",
+        emoji: "🌿",
+        desc: "Salsa espesa de pepitas de calabaza, tomatillo, chile serrano, cilantro y epazote.",
+        ingredients: ["180g pollo (muslo o pechuga)", "80g pepitas de calabaza", "Tomatillo, chile serrano, cilantro, epazote", "½ taza arroz", "3 tortillas"],
+        tip: "Las pepitas son una de las fuentes más altas de zinc y hierro vegetal.",
+        macros: { kcal: 580, p: "40g", c: "44g", g: "22g" },
+        iron: "⬆️ Pepitas (hierro vegetal) + pollo",
+        stimulate: "🌿 La combinación de hierbas aromáticas abre el apetito"
+      },
+      {
+        name: "Barbacoa de res en consomé con garbanzos",
+        emoji: "🍖",
+        desc: "Barbacoa de res con consomé especiado con garbanzos, arroz, tortillas y salsas.",
+        ingredients: ["150g barbacoa de res (parte magra)", "1 taza consomé de barbacoa", "Cilantro, cebolla, orégano", "3 tortillas de maíz", "Salsa verde", "Limón"],
+        tip: "El consomé caliente con garbanzo es reconstituyente.",
+        macros: { kcal: 540, p: "40g", c: "46g", g: "16g" },
+        iron: "⭐ Hierro hemo de res (muy alto)",
+        stimulate: "🍖 El consomé caliente abre el apetito"
+      },
+      {
+        name: "Mojarra frita con espinacas salteadas",
+        emoji: "🐟",
+        desc: "Mojarra entera frita o a la plancha, con espinacas salteadas en ajo, arroz rojo y tortillas.",
+        ingredients: ["1 mojarra entera (180g)", "1 taza espinacas baby", "3 dientes de ajo", "½ taza arroz rojo", "Limón generoso"],
+        tip: "Doble fuente de hierro: pescado + espinaca. El ajo potencia la absorción.",
+        macros: { kcal: 530, p: "42g", c: "40g", g: "14g" },
+        iron: "⭐ Doble hierro: pescado + espinaca + limón",
+        stimulate: "🔥 El crujido del pescado frito es irresistible"
+      }
+    ]
+  },
+  {
+    meal: "🌤️ Snack Tarde 5–6 pm",
+    kcal: "180–220",
+    protein: "8–14g",
+    iron: "💪 Post-entreno",
+    appetiteNote: "Snack clave para recuperación muscular óptima post-entreno.",
+    color: palette.accent2,
+    options: [
+      {
+        name: "Atún al limón con galletas integrales",
+        emoji: "🐟",
+        desc: "Media lata de atún en agua con limón, cebolla picada, chile jalapeño y ½ aguacate.",
+        ingredients: ["½ lata atún en agua (85g)", "Limón, sal, pimienta", "Cebolla blanca picada", "¼ aguacate", "5 galletas integrales"],
+        tip: "Proteína de absorción rápida post-entreno.",
+        macros: { kcal: 210, p: "22g", c: "18g", g: "6g" },
+        iron: "⬆️ Atún (hierro hemo)",
+        stimulate: "🐟 El atún con jalapeño y limón es muy sabroso"
+      },
+      {
+        name: "Licuado verde proteico con plátano",
+        emoji: "🥤",
+        desc: "Espinaca, plátano, leche o agua, chía y miel de abeja pura.",
+        ingredients: ["1 puño espinaca baby", "1 plátano maduro", "1 taza leche o agua", "1 cda chía", "1 cdita miel de abeja"],
+        tip: "El plátano repone glucógeno muscular.",
+        macros: { kcal: 220, p: "8g", c: "36g", g: "4g" },
+        iron: "⬆️ Espinaca + vitamina de la leche",
+        stimulate: "🍌 El licuado frío es refrescante"
+      },
+      {
+        name: "Elote en vaso",
+        emoji: "🌽",
+        desc: "Granos de elote cocido con mayonesa ligera, queso rallado, chile piquín y limón.",
+        ingredients: ["1 elote desgranado", "2 cdas queso rallado", "1 cda mayonesa light", "Chile piquín y limón"],
+        tip: "El elote tiene fibra, vitaminas y minerales.",
+        macros: { kcal: 200, p: "8g", c: "30g", g: "6g" },
+        iron: "Normal",
+        stimulate: "🌶️ El chile piquín lo hace el snack muy sabroso"
+      },
+      {
+        name: "Jícama con chile, limón y pepitas",
+        emoji: "🫚",
+        desc: "Jícama fresca en bastones con jugo de limón, chile piquín y pepitas de calabaza tostadas.",
+        ingredients: ["150g jícama en bastones", "Jugo de 2 limones", "Chile piquín generoso", "20g pepitas de calabaza"],
+        tip: "La jícama es hidratante y su fibra regula la digestión.",
+        macros: { kcal: 165, p: "6g", c: "26g", g: "5g" },
+        iron: "⬆️ Pepitas (hierro vegetal)",
+        stimulate: "🌶️ El contraste frío-crujiente es irresistible"
+      },
+      {
+        name: "Yogur con granola artesanal",
+        emoji: "🥛",
+        desc: "Yogur natural entero con granola artesanal de avena y fruta de temporada.",
+        ingredients: ["1 yogur natural entero", "3 cdas granola artesanal", "½ taza fruta"],
+        tip: "El yogur entero tiene más calorías para recuperar peso.",
+        macros: { kcal: 210, p: "10g", c: "32g", g: "5g" },
+        iron: "Normal",
+        stimulate: "🥭 La fruta tropical abre el apetito"
       }
     ]
   },
   {
     meal: "🌙 Cena 7–8 pm",
-    kcal: "~380 kcal",
-    protein: "22g",
-    iron: "Moderado",
+    kcal: "350–420",
+    protein: "20–28g",
+    iron: "🌙 Digestión nocturna",
+    appetiteNote: "Cena ligera pero completa. El cuerpo repara músculo en el sueño.",
+    color: palette.accent2,
     options: [
       {
-        name: "Quesadillas de huitlacoche",
-        ingredients: ["2 tortillas grandes","Huitlacoche salteado con epazote","Queso Oaxaca","Frijoles negros de acompañamiento","Agua de jamaica sin azúcar"],
-        tip: "Huitlacoche = proteína vegetal + hierro",
-        local: "Huitlacoche de temporada en mercados de Cuernavaca"
+        name: "Quesadillas de huitlacoche con epazote",
+        emoji: "🫔",
+        desc: "Quesadillas grandes con huitlacoche salteado, queso derretido y frijoles.",
+        ingredients: ["2 tortillas grandes de maíz", "½ taza huitlacoche salteado", "Epazote fresco", "Queso tipo Oaxaca", "Frijoles negros", "Salsa verde"],
+        tip: "El huitlacoche tiene proteína vegetal, hierro y aminoácidos esenciales.",
+        macros: { kcal: 400, p: "22g", c: "46g", g: "14g" },
+        iron: "⬆️ Huitlacoche + queso",
+        stimulate: "🍄 El aroma terroso del huitlacoche es único"
+      },
+      {
+        name: "Sopa de lentejas con chorizo de soya",
+        emoji: "🍜",
+        desc: "Lentejas cocidas en caldillo de jitomate, chile guajillo, cebolla y ajo, con chorizo de soya salteado.",
+        ingredients: ["1 taza lentejas cocidas", "2 chiles guajillo", "Jitomate, cebolla, ajo", "50g chorizo de soya", "Epazote o cilantro", "Limón SIEMPRE"],
+        tip: "Las lentejas son la fuente de hierro vegetal más alta por porción.",
+        macros: { kcal: 380, p: "24g", c: "52g", g: "6g" },
+        iron: "⭐ Hierro vegetal máximo",
+        stimulate: "🌶️ El chile guajillo da un aroma ahumado que abre el apetito"
+      },
+      {
+        name: "Tinga de pollo en tostadas con aguacate",
+        emoji: "🥙",
+        desc: "Pollo deshebrado en salsa de jitomate con chile chipotle ahumado sobre tostadas.",
+        ingredients: ["130g pollo deshebrado en tinga", "Chile chipotle en adobo", "2 tostadas horneadas", "Frijoles negros untados", "½ aguacate · Crema · Queso fresco"],
+        tip: "El chipotle es ahumado y abre el apetito. Proteína completa + grasas del aguacate.",
+        macros: { kcal: 420, p: "28g", c: "38g", g: "16g" },
+        iron: "⬆️ Pollo + frijoles",
+        stimulate: "🔥 El aroma del chipotle es muy apetitoso"
+      },
+      {
+        name: "Tacos de nopales con huevo",
+        emoji: "🌮",
+        desc: "Nopales tiernos salteados con chile serrano, ajo y cebolla, mezclados con huevo revuelto.",
+        ingredients: ["1 taza nopales tiernos", "2 huevos revueltos", "3 tortillas de maíz", "Salsa picante", "Queso fresco desmoronado"],
+        tip: "Las salsas picantes estimulan el apetito.",
+        macros: { kcal: 360, p: "20g", c: "42g", g: "12g" },
+        iron: "⬆️ Nopales (hierro vegetal) + huevo",
+        stimulate: "🌶️ La salsa picante tiene un aroma muy apetitoso"
+      },
+      {
+        name: "Pozole verde ligero con pollo",
+        emoji: "🍵",
+        desc: "Pozole de maíz en caldo verde de tomatillo, pepitas y chile serrano.",
+        ingredients: ["1 taza maíz pozolero", "100g pollo deshebrado", "Tomatillo, pepitas, serrano, cilantro", "Lechuga, rábano, orégano", "2 tostadas", "Limón"],
+        tip: "El pozole verde es ligero y reconfortante.",
+        macros: { kcal: 410, p: "26g", c: "50g", g: "10g" },
+        iron: "⬆️ Pepitas + pollo + tomatillo",
+        stimulate: "♨️ El caldo caliente con orégano y limón es reconfortante"
       }
-    ]
-  },
-  {
-    meal: "🌙 Snack Noche 9 pm",
-    kcal: "~130 kcal",
-    protein: "10g",
-    iron: "Bajo",
-    options: [
-      { name: "Yogur natural + nueces", ingredients: ["1 yogur natural","10 nueces o almendras"], tip: "Proteína para reparación muscular nocturna", local: "" }
     ]
   }
 ];
@@ -303,37 +537,96 @@ function renderNutricion() {
             `).join('')}
         </div>
 
-        <div class="meal-stats">
-            <div class="meal-stat" style="border-color: var(--accent)"><span style="color: var(--muted); font-size: 10px;">KCAL</span><br><b style="color: var(--accent)">${meal.kcal}</b></div>
-            <div class="meal-stat" style="border-color: var(--accent-2)"><span style="color: var(--muted); font-size: 10px;">PROT</span><br><b style="color: var(--accent-2)">${meal.protein}</b></div>
-            <div class="meal-stat" style="border-color: var(--red)"><span style="color: var(--muted); font-size: 10px;">HIERRO</span><br><b style="color: var(--red)">${meal.iron}</b></div>
+        <div class="card" style="background: linear-gradient(135deg, ${meal.color}15, transparent); border-color: ${meal.color}30;">
+            <div class="card-body">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 12px;">
+                    <div>
+                        <h2 style="margin: 0; font-size: 20px; color: ${meal.color}">${meal.meal}</h2>
+                        <div style="font-size: 12px; color: var(--muted); margin-top: 4px;">🕐 Consumo recomendado</div>
+                    </div>
+                    <div style="display: flex; gap: 8px;">
+                        <span class="meal-stat" style="border-color: var(--accent); color: var(--accent); font-weight: bold;">🔥 ${meal.kcal} kcal</span>
+                        <span class="meal-stat" style="border-color: var(--accent-2); color: var(--accent-2); font-weight: bold;">💪 ${meal.protein}</span>
+                        <span class="meal-stat" style="border-color: var(--red); color: var(--red); font-weight: bold;">${meal.iron}</span>
+                    </div>
+                </div>
+                ${meal.appetiteNote ? `
+                    <div style="margin-top: 16px; padding: 12px; background: rgba(255,255,255,0.03); border-left: 3px solid ${meal.color}; border-radius: 4px; font-size: 13px; color: var(--muted);">
+                        💡 <b>Tip Apetito:</b> ${meal.appetiteNote}
+                    </div>
+                ` : ''}
+            </div>
         </div>
 
-        <h3 style="margin-bottom: 16px; color: var(--gold)">${meal.meal}</h3>
+        <h3 style="font-size: 12px; color: var(--gold); text-transform: uppercase; letter-spacing: 2px; margin: 24px 0 16px;">🍽️ Opciones de Platillos</h3>
 
         ${meal.options.map((opt, i) => `
             <div class="card">
+                <div class="card-header" style="display: flex; justify-content: space-between; align-items: center;">
+                    <div style="font-weight: 700; font-size: 16px;">${opt.emoji || '🍽️'} Opción ${i+1}: ${opt.name}</div>
+                </div>
                 <div class="card-body">
-                    <div style="font-weight: 700; margin-bottom: 12px;">🍽️ Opción ${i+1}: ${opt.name}</div>
-                    <div style="margin-bottom: 12px;">
-                        ${opt.ingredients.map(ing => `<div class="list-item" style="padding: 4px 0">• ${ing}</div>`).join('')}
+                    <p style="font-size: 13px; color: var(--muted); margin-bottom: 16px; font-style: italic;">${opt.desc || ''}</p>
+                    
+                    <div style="margin-bottom: 16px;">
+                        <div style="font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;">Ingredientes Clave</div>
+                        <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+                            ${opt.ingredients.map(ing => `<span style="background: var(--border); padding: 4px 10px; border-radius: 20px; font-size: 11px;">${ing}</span>`).join('')}
+                        </div>
                     </div>
-                    <div class="ex-tip" style="background: rgba(78, 203, 113, 0.1); border-color: var(--green)">💡 ${opt.tip}</div>
-                    ${opt.local ? `<div class="ex-tip" style="background: rgba(240, 192, 64, 0.1); border-color: var(--gold); margin-top: 8px;">📍 ${opt.local}</div>` : ''}
+
+                    ${opt.macros ? `
+                        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 16px; background: rgba(0,0,0,0.2); padding: 10px; border-radius: 8px;">
+                            <div style="text-align: center;"><div style="font-size: 9px; color: var(--muted);">KCAL</div><div style="font-size: 13px; font-weight: bold; color: ${meal.color}">${opt.macros.kcal}</div></div>
+                            <div style="text-align: center;"><div style="font-size: 9px; color: var(--muted);">PROT</div><div style="font-size: 13px; font-weight: bold; color: var(--accent-2)">${opt.macros.p}</div></div>
+                            <div style="text-align: center;"><div style="font-size: 9px; color: var(--muted);">CARB</div><div style="font-size: 13px; font-weight: bold; color: var(--green)">${opt.macros.c}</div></div>
+                            <div style="text-align: center;"><div style="font-size: 9px; color: var(--muted);">GRAS</div><div style="font-size: 13px; font-weight: bold; color: var(--accent)">${opt.macros.g}</div></div>
+                        </div>
+                    ` : ''}
+
+                    <div style="display: flex; flex-direction: column; gap: 8px;">
+                        ${opt.iron ? `<div style="font-size: 12px; color: var(--red); background: rgba(224, 92, 92, 0.1); padding: 8px; border-radius: 6px; border-left: 3px solid var(--red);">🩸 <b>Hierro:</b> ${opt.iron}</div>` : ''}
+                        ${opt.stimulate ? `<div style="font-size: 12px; color: ${meal.color}; background: ${meal.color}10; padding: 8px; border-radius: 6px; border-left: 3px solid ${meal.color};">🌶️ <b>Estímulo:</b> ${opt.stimulate}</div>` : ''}
+                        <div class="ex-tip" style="background: rgba(78, 203, 113, 0.1); border-color: var(--green)">💡 ${opt.tip}</div>
+                    </div>
                 </div>
             </div>
         `).join('')}
 
-        <div class="card" style="margin-top: 30px;">
-            <div class="card-header"><h3 style="font-size: 13px; color: var(--red); text-transform: uppercase;">🩸 Reglas de Hierro</h3></div>
+        <div class="card" style="margin-top: 30px; border-top: 3px solid var(--red);">
+            <div class="card-header"><h3 style="font-size: 13px; color: var(--red); text-transform: uppercase; letter-spacing: 2px;">🩸 Reglas Críticas de Hierro</h3></div>
             <div class="card-body" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
                 <div style="font-size: 12px;">
-                    <b style="color: var(--green)">✅ SIEMPRE</b><br>
-                    <span style="color: var(--muted)">Limón, naranja, guayaba, jamaica, frijoles negros.</span>
+                    <b style="color: var(--green)">✅ POTENCIADORES</b><br>
+                    <div style="color: var(--muted); margin-top: 8px; line-height: 1.6;">
+                        • Limón o naranja con comidas<br>
+                        • Guayaba como snack principal<br>
+                        • Agua de jamaica sin azúcar<br>
+                        • Chile (capsaicina activa digestión)
+                    </div>
                 </div>
                 <div style="font-size: 12px;">
-                    <b style="color: var(--red)">❌ EVITAR (±2h)</b><br>
-                    <span style="color: var(--muted)">Café, té, leche, queso, antiácidos.</span>
+                    <b style="color: var(--red)">❌ INHIBIDORES (alejar 2h)</b><br>
+                    <div style="color: var(--muted); margin-top: 8px; line-height: 1.6;">
+                        • Café (reduce absorción 39%)<br>
+                        • Té negro o verde<br>
+                        • Leche y queso junto con hierro<br>
+                        • Antiácidos o calcio
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" style="margin-top: 20px; background: linear-gradient(135deg, var(--gold)10, transparent); border-color: var(--gold)40;">
+            <div class="card-header"><h3 style="font-size: 13px; color: var(--gold); text-transform: uppercase; letter-spacing: 2px;">⚡ Hacks para estimular el apetito</h3></div>
+            <div class="card-body">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                    <div style="font-size: 11px; background: rgba(0,0,0,0.2); padding: 8px; border-radius: 6px;"><b>🍋 Agua con limón:</b> 15 min antes activa enzimas</div>
+                    <div style="font-size: 11px; background: rgba(0,0,0,0.2); padding: 8px; border-radius: 6px;"><b>🥣 Platos pequeños:</b> Engaña al cerebro para terminar</div>
+                    <div style="font-size: 11px; background: rgba(0,0,0,0.2); padding: 8px; border-radius: 6px;"><b>🧂 Menos agua:</b> No bebas mucho líquido MIENTRAS comes</div>
+                    <div style="font-size: 11px; background: rgba(0,0,0,0.2); padding: 8px; border-radius: 6px;"><b>🌶️ Especias:</b> Chile y canela despiertan el hambre</div>
+                    <div style="font-size: 11px; background: rgba(0,0,0,0.2); padding: 8px; border-radius: 6px;"><b>🚶 Paseo corto:</b> 10 min de sol activa el metabolismo</div>
+                    <div style="font-size: 11px; background: rgba(0,0,0,0.2); padding: 8px; border-radius: 6px;"><b>🥗 Color:</b> Presentación colorida abre el apetito</div>
                 </div>
             </div>
         </div>
